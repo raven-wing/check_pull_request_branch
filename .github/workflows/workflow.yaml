@@ -11,7 +11,7 @@ jobs:
           branch_name=${GITHUB_HEAD_REF}
           echo "pr branch name: $branch_name"
           
-          target_branch=${GITHUB_REF}
+          target_branch=${GITHUB_BASE_REF}
           echo "target branch: $target_branch"
           dev_regex="^(bug|feature|code-cleanup)\/JIRA-\d+-.+$"
           qa_regex="^kickback\/JIRA-\d+-.+$"
