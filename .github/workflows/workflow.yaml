@@ -15,13 +15,13 @@ jobs:
           
           if [[ "$branch_name" =~ $dev_regex ]]; then
             echo "Branch name matches the first regex pattern."
-            if [[ "$target_branch" != "dev" ]]
+            if [[ "$target_branch" != "dev" ]]; then
               echo "but doesn't match target branch"
               exit 1
             fi
           elif [[ "$branch_name" =~ $qa_regex ]]; then
             echo "Branch name matches the second regex pattern."
-            if [[ "$target_branch" != "dev" ]]
+            if [[ "$target_branch" != "dev" ]]; then
               echo "but doesn't match target branch"
               exit 1
             fi
