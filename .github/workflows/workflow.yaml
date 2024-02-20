@@ -8,10 +8,10 @@ jobs:
     steps:
       - name: Check if PR target branch is ok
         run: |
-          branch_name=${{ github.event.pull_request.head_ref }}
+          branch_name=${{ github.head_ref }}
           echo "pr branch name: $branch_name"
           
-          target_branch=${{ github.event.pull_request.base_ref }}
+          target_branch=${{ github.base_ref }}
           echo "target branch: $target_branch"
           dev_regex="^(bug|feature|code-cleanup)\/JIRA-\d+-.+$"
           qa_regex="^kickback\/JIRA-\d+-.+$"
